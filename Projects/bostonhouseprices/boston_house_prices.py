@@ -22,7 +22,7 @@ from sklearn.ensemble import AdaBoostRegressor
 from sklearn.metrics import mean_squared_error
 
 # Load dataset
-url = "https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data"
+url = "housing.data"
 names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 dataset = pandas.read_csv(url, delim_whitespace=True, names=names)
 
