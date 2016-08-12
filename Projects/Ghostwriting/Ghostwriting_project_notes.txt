@@ -1,4 +1,26 @@
 
+Get dataset
+Test Learning
+
+Generate dataset:
+
+- Download texts from multiple authors
+- preprocess files to remove junk
+- split into 100 line files with author name followed by ‘_’ then a suffix
+    - split -l 100  alexandredumas.txt alexandredumas_
+
+How many authors?
+
+Want 1000 rows to test
+500 same
+500 different
+
+DAtaset
+Old_metrics, new_metrics, output
+
+
+
+
 ## Example of splitting a text file into chunks:
 split -l 200 AlexandreDumas.txt AlexandreDumas_
 
@@ -59,3 +81,35 @@ select a.LexicalDiversity,a.MeanWordLen,a.MeanSentenceLen,a.StdevSentenceLen,a.M
 b.LexicalDiversity,b.MeanWordLen,b.MeanSentenceLen,b.StdevSentenceLen,b.MeanParagraphLen,b.DocumentLen,b.Commas,b.Semicolons,b.Quotes,b.Exclamations,b.Colons,b.Dashes,b.Mdashes,b.Ands,b.Buts,b.Howevers,b.Ifs,b.Thats,b.Mores,b.Musts,b.Mights,b.This,b.Verys, 1 from paper_metrics_tidy a, paper_metrics_tidy b where a.author != b.author order by random() limit 1000;
 select a.LexicalDiversity,a.MeanWordLen,a.MeanSentenceLen,a.StdevSentenceLen,a.MeanParagraphLen,a.DocumentLen,a.Commas,a.Semicolons,a.Quotes,a.Exclamations,a.Colons,a.Dashes,a.Mdashes,a.Ands,a.Buts,a.Howevers,a.Ifs,a.Thats,a.Mores,a.Musts,a.Mights,a.This,a.Verys,
 b.LexicalDiversity,b.MeanWordLen,b.MeanSentenceLen,b.StdevSentenceLen,b.MeanParagraphLen,b.DocumentLen,b.Commas,b.Semicolons,b.Quotes,b.Exclamations,b.Colons,b.Dashes,b.Mdashes,b.Ands,b.Buts,b.Howevers,b.Ifs,b.Thats,b.Mores,b.Musts,b.Mights,b.This,b.Verys,0 from paper_metrics_tidy a, paper_metrics_tidy b where a.author = b.author order by random() limit 1000;
+
+
+
+#####################
+#####################
+# Machine Learning
+#####################
+#####################
+
+Import Libraries
+Load dataset
+
+Summarise to check data
+
+Split-out validation dataset
+Set test options and evaluation metric - k-fold cross validation
+
+
+
+
+Later - 
+Visualizations
+Prune inputs
+Deep Learning
+Consensus of algorithms
+
+
+
+
+
+
+
